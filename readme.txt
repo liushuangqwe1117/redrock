@@ -1,3 +1,4 @@
 git tracks changes of files
 my stupid boss still prefers SVN
-creating a neasfw branch & quick
+creating a newabc branch is quick and simple
+
