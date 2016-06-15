@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
-	<name>dubbo-sample-consumer</name>
+	<name>dubbo-sample-provider</name>
 	<comment></comment>
 	<projects>
 	</projects>
