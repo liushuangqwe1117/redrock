@@ -12,6 +12,7 @@ public class HelloServiceInvokeTest extends BaseTest {
 	public void testPrintHello() {
 		try {
 			helloServiceInvoke.printHello();
+			Thread.sleep(9000);
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

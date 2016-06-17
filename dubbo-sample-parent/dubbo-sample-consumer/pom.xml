@@ -5,12 +5,12 @@
 	<parent>
 		<groupId>redrock.dubbo.sample</groupId>
 		<artifactId>dubbo-sample-parent</artifactId>
-		<version>0.0.1-SNAPSHOT</version>
+		<version>0.0.1</version>
 		<relativePath>../</relativePath>
 	</parent>
 
 	<artifactId>dubbo-sample-consumer</artifactId>
-	<packaging>jar</packaging>
+	<packaging>war</packaging>
 
 	<name>dubbo-sample-consumer</name>
 	<url>http://maven.apache.org</url>
@@ -88,10 +88,12 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
+		<!-- <dependency> <groupId>com.github.sgroschupf</groupId> <artifactId>zkclient</artifactId> 
+			<version>0.1</version> </dependency> -->
 		<dependency>
-			<groupId>com.github.sgroschupf</groupId>
+			<groupId>com.101tec</groupId>
 			<artifactId>zkclient</artifactId>
-			<version>0.1</version>
+			<version>0.8</version>
 		</dependency>
 		<!-- j2ee web spec -->
 		<dependency>
@@ -112,4 +114,20 @@
 			<version>1.2</version>
 		</dependency>
 	</dependencies>
+	<build>
+		<finalName>consumer</finalName>
+		<plugins>
+			<!-- tomcat7:run -->
+			<plugin>
+				<groupId>org.apache.tomcat.maven</groupId>
+				<artifactId>tomcat7-maven-plugin</artifactId>
+				<configuration>
+					<path>/${project.build.finalName}</path>
+					<port>9091</port>
+					<argLine>-Xms512m -Xmx512m -XX:PermSize=128M -XX:MaxPermSize=256M
+					</argLine>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
 </project>

@@ -4,7 +4,7 @@
 	<parent>
 		<groupId>redrock.dubbo.sample</groupId>
 		<artifactId>dubbo-sample-parent</artifactId>
-		<version>0.0.1-SNAPSHOT</version>
+		<version>0.0.1</version>
 		<relativePath>../</relativePath>
 	</parent>
 	<artifactId>dubbo-sample-provider</artifactId>
