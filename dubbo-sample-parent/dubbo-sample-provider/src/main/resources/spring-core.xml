@@ -18,17 +18,5 @@
 		base-package="redrock.dubbo.sample">
 	</context:component-scan>
 	
-	<!-- 提供方应用信息，用于计算依赖关系 -->
-	<dubbo:application name="hello-provider-app" />
-
-	<!-- 使用zookeeper注册中心暴露服务地址 -->
-	<dubbo:registry address="zookeeper://192.168.1.151:2181" />
-
-	<!-- 
-		dubbo协议
-		用dubbo协议在20880端口暴露服务,不能与tomcat的http端口一样，否则会暴端口冲突
-	 -->
-	<dubbo:protocol name="dubbo" port="20880" />
-	
-	<dubbo:annotation package="redrock.dubbo.sample"/>
+	<import resource="spring-dubbo.xml"/>
 </beans>

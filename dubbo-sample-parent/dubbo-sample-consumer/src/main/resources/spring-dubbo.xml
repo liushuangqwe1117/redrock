@@ -9,11 +9,10 @@
 	<!-- 使用zookeeper注册中心暴露服务地址 -->
 	<dubbo:registry id="register" address="zookeeper://192.168.1.151:2181" />
 
-	<dubbo:annotation package=""/>
 	<!-- 项目启动时是否检测provider是否存在 -->
 	<!-- <dubbo:consumer check="false" /> -->
 
 	<!-- 生成远程服务代理，可以和本地bean一样使用helloService -->
 	<dubbo:reference id="helloService"
-		interface="redrock.dubbo.sample.api.HelloService" group="test" timeout="1000" />
+		interface="redrock.dubbo.sample.api.HelloService" timeout="1000" />
 </beans>

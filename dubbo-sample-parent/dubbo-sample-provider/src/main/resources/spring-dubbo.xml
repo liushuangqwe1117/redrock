@@ -4,9 +4,8 @@
 	xmlns:dubbo="http://code.alibabatech.com/schema/dubbo"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd        
 						http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
-
 	<!-- 提供方应用信息，用于计算依赖关系 -->
-	<dubbo:application name="hello-provider-app" />
+	<dubbo:application name="application-provider" />
 
 	<!-- 使用zookeeper注册中心暴露服务地址 -->
 	<dubbo:registry address="zookeeper://192.168.1.151:2181" />
@@ -35,7 +34,6 @@
 	<!-- <dubbo:protocol name="hessian" server="servlet" port="9090" contextpath="provider" /> -->
 
 	<!-- 声明需要暴露的服务接口 -->
-	<dubbo:service interface="redrock.dubbo.sample.api.HelloService"
-		ref="helloService" group="test" />
+	<dubbo:service interface="redrock.dubbo.sample.api.HelloService" ref="helloService"/>
 
 </beans>

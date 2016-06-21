@@ -1,17 +1,16 @@
 package redrock.dubbo.sample.provider;
 
-import com.alibaba.dubbo.config.annotation.Service;
+import org.springframework.stereotype.Service;
 
 import redrock.dubbo.sample.api.HelloService;
 
-@Service
-//@org.springframework.stereotype.Service
+@Service("helloService")
 public class HelloServiceImpl implements HelloService {
 
 	@Override
 	public String sayHello(String name) {
-		System.out.println("dubbo-sample-provider:welcome " + name);
-		return "welcome " + name;
+		System.out.println("provider1:welcome " + name);
+		return "welcome " + name + " from provider1";
 	}
 
 }

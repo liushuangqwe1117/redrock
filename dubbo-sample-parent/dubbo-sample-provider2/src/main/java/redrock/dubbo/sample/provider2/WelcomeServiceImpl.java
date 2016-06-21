@@ -1,7 +1,10 @@
 package redrock.dubbo.sample.provider2;
 
+import org.springframework.stereotype.Service;
+
 import redrock.dubbo.sample.api.WelcomeService;
 
+@Service("welcomeService")
 public class WelcomeServiceImpl implements WelcomeService {
 
 	@Override

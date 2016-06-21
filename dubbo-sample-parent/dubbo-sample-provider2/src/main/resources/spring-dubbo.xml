@@ -6,7 +6,7 @@
 						http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd">
 
 	<!-- 提供方应用信息，用于计算依赖关系 -->
-	<dubbo:application name="hello-provider-app" />
+	<dubbo:application name="application-provider" />
 
 	<!-- 使用zookeeper注册中心暴露服务地址 -->
 	<dubbo:registry address="zookeeper://192.168.1.151:2181" />
@@ -35,10 +35,6 @@
 	<!-- <dubbo:protocol name="hessian" server="servlet" port="9090" contextpath="provider" /> -->
 
 	<!-- 声明需要暴露的服务接口 -->
-	<dubbo:service interface="redrock.dubbo.sample.api.WelcomeService"
-		ref="welcomeService" group="test" />
-		
-	<!-- 和本地bean一样实现服务 -->
-	<bean id="welcomeService" class="redrock.dubbo.sample.provider2.WelcomeServiceImpl" />
-
+	<dubbo:service interface="redrock.dubbo.sample.api.WelcomeService" ref="welcomeService" />
+	<dubbo:service interface="redrock.dubbo.sample.api.HelloService" ref="helloService"/>
 </beans>
