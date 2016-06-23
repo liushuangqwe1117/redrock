@@ -1,2 +1,1 @@
-# redrock
 redrock test

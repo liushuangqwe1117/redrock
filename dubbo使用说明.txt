@@ -1,0 +1,5 @@
+【安装Zookeeper注册中心】
+http://dubbo.io/Administrator+Guide-zh.htm
+
+【安装Dubbo管理控制台】
+http://dubbo.io/Administrator+Guide-zh.htm
